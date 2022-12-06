@@ -15,9 +15,6 @@ app.use(express.urlencoded({
 }))
 app.use(express.json())
 
-//Http logger middleware
-// app.use(morgan('combined'))
-
 //template engine setup
 app.engine('hbs', hbs.engine({
   extname: '.hbs',
