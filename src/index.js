@@ -31,10 +31,11 @@ app.set('views', './src/resources/views')
 
 // CONNECT DATABASE
 dotenv.config()
+console.log((process.env.MONGODB_URL))
 
-mongoose.connect((process.env.MONGODB_URL), () => {
-  console.log("Connected to MongoDB !!!")
-})
+// mongoose.connect((process.env.MONGODB_URL), () => {
+//   console.log("Connected to MongoDB !!!")
+// })
 
 // Routes init
 route(app)
