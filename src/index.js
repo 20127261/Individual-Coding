@@ -11,7 +11,7 @@ const app = express()
 const port = 3000
 
 const route = require('./routes')
-
+const db = require('./config/db')
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({extended: true}))
@@ -30,12 +30,7 @@ app.set('view engine', 'hbs')
 app.set('views', './src/resources/views')
 
 // CONNECT DATABASE
-dotenv.config()
-console.log((process.env.MONGODB_URL))
-
-// mongoose.connect((process.env.MONGODB_URL), () => {
-//   console.log("Connected to MongoDB !!!")
-// })
+db.connect()
 
 // Routes init
 route(app)
