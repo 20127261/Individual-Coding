@@ -9,6 +9,8 @@ const Signin = new Schema({
     singoutAt: {type: Date, default: Date.now},
     action: {type: String, default: 'System'},
 
-}, { connection: 'signin'})
+}, { collection: 'signin'})
 
-module.exports = mongoose.model('signin', Signin)
+const SigninModel = mongoose.model('signin', Signin)
+
+module.exports = SigninModel

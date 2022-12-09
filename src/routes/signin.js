@@ -4,6 +4,6 @@ const router = express.Router()
 const signinController = require('../app/controllers/SigninController')
 
 router.use('/:slug', signinController.show)
-router.use('/', signinController.index)
+router.use('/', signinController.signin)
 
 module.exports = router
