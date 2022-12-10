@@ -9,7 +9,7 @@ class SigninController {
 
         SignniModel.create({
             username: username,
-            password: password
+            password: password,
         })
         .then(data=>{
             res.json('Signin successfully !!!')
