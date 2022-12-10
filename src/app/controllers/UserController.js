@@ -1,6 +1,5 @@
 const { restart } = require('nodemon')
 const SigninModel = require('../models/Signin')
-const UserModel = require('../models/User')
 
 class UserController {
 
